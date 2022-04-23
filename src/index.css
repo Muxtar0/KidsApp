@@ -22,15 +22,15 @@ body,html{
   width:100%;
 }
 .SwiperSlide{
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .MainDiv{
-  width:300px;
+  width:20%;
   margin: auto;
-  height: 490px;
+  height: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
