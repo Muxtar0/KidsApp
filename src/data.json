@@ -1,0 +1,18 @@
+{"datas":
+    [
+        {
+            "id": 1,
+            "title": "Deneme",
+            "body": "Cr: @denemevideo",
+            "video_path": "https://nitrotema.com/video1.mp4"
+          },
+          
+            {
+            "id": 2,
+            "title": "Deneme 2",
+            "body": "Cr: @dummyvideos",
+            "video_path": "https://nitrotema.com/video2.mp4"
+          }
+        
+    ]
+}

@@ -28,7 +28,7 @@ body,html{
   align-items: center;
 }
 .MainDiv{
-  width:20%;
+  width:22%;
   margin: auto;
   height: 90%;
   display: flex;
@@ -38,10 +38,10 @@ body,html{
   border-radius: 10px;
   position: relative;
 }
-.Image{
+video{
   width:100%;
   height:100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
 }
 nav{
@@ -196,6 +196,10 @@ nav .navBTN.active{
   .MainDiv{
     width:100%;
     height: 100%;
+    border-radius: 0;
+  }
+  video{
+    border-radius: 0;
   }
   nav{
     height:50px;

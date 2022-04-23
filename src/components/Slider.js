@@ -6,6 +6,7 @@ import 'swiper/css/mousewheel';
 import Categories from './Categories';
 import Descriprion from './Descriprion';
 import Controls from './Controls';
+import data from '../data.json'
 function Slider() {
     const [isMuteVideo,setIsMuteVideo] = useState(false)
     const [isStopVideo,setIsStopVideo] = useState(false)
@@ -43,17 +44,22 @@ function Slider() {
 
     
     useEffect(() => {
-      fetch("https://dummyjson.com/products")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            setDatas(result.products)
-            setIsDataFetching(true)
-          },
-          (error) => {
-            setIsDataFetching(false)
-          }
-        )
+      // { mode: 'no-cors'}
+      // fetch(data,)
+      //   .then(res => res.json())
+      //   .then(
+      //     (result) => {
+      //       console.log(result)
+      //       setDatas(result)
+      //       setIsDataFetching(true)
+      //     },
+      //     (error) => {
+      //       console.log(error)
+      //       setIsDataFetching(false)
+      //     }
+      //   )
+      setDatas(data.datas)
+      setIsDataFetching(true)
         
     },[])
   return (
@@ -77,9 +83,12 @@ function Slider() {
         datas.map((data) =>(
           <SwiperSlide key={data.id} className="SwiperSlide">
           <div className="MainDiv">
-            <img className="Image" src={data.images[0]} />
+          <video  autoPlay muted name="media">
+            <source src={data.video_path} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video> 
             <Controls/>
-            <Descriprion/>
+            <Descriprion description={data.title}/>
             <Categories/>
           </div>
         </SwiperSlide>
